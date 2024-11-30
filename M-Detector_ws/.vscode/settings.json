@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "iosfwd": "cpp",
+        "array": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "ranges": "cpp"
+    }
+}

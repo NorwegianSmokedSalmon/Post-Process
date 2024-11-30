@@ -1,0 +1,26 @@
+<launch>
+  <node pkg="hba" type="hba" name="hba" output="screen">
+    <!-- iter control -->
+    <param name="iter_num" type="int" value="5"/>  <!--if = 0, press enter each time to continue iteration; if > 0, continue iteration automatically-->
+
+    <!-- hba -->
+    <!-- <param name="data_path" type="string" value="/home/ckx/workbench/BA/train1/"/> -->
+    <!-- <param name="data_path" type="string" value="/home/ckx/workbench/BA/train2/"/> -->
+    <!-- <param name="data_path" type="string" value="/home/jack/train1/"/> -->
+    <param name="data_path" type= "string" value = "//home/jack/FastLab/Multi-UAV-Map-Post-Process/data/body_pcd/"/>
+    <!-- <param name="data_path" type="string" value="/home/ckx/workbench/BA/park/"/> -->
+    <!-- <param name="data_path" type="string" value="/home/ckx/workbench/BA/kitti07/"/> -->
+    <param name="input_json_file" type="string" value="pose.json"/>
+    <!-- <param name="input_json_file" type="string" value="pose.json"/> -->
+
+    <param name="total_layer_num" type="int" value="3"/>
+    <param name="pcd_name_fill_num" type="int" value="0"/> <!--set 5 for kitti07 and 0 for park-->
+    <param name="thread_num" type="int" value="8"/>
+    <!--窗口大小和步长可以在ba.hpp文件中 通过宏定义来调整 -->
+    
+    <!-- visualize -->
+    <param name="downsample_size_vis" type="double" value="0.1"/>
+    <param name="marker_size" type="double" value="0.5"/>
+  </node>
+
+</launch>

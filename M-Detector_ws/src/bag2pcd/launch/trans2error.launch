@@ -1,0 +1,10 @@
+
+<launch>
+  <param name="trans_config_file" value="launch/transformations.yaml"/>
+  <param name="trans_name" value="trans"/>
+  <param name="trans_file_name" value="pose.json"/>
+  <param name="trans_file_out_name" value="pose_out.json"/>
+
+  <node name="trans2error" pkg="bag2pcd" type="trans2error" output="screen"/>
+
+</launch>

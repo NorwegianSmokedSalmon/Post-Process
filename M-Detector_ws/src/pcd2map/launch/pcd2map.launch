@@ -1,0 +1,19 @@
+<launch>
+	<arg name="rviz" default="true" />
+
+  <!-- <param name="pcd_folder" type="string" value="/home/dwyane/ANOW/mine/code/loop_closure/map_post_process/src/bag2pcd/trans/pcd"/>
+  <param name="pose_file" type="string" value="/home/dwyane/ANOW/mine/code/loop_closure/map_post_process/src/bag2pcd/trans/pose_out.json"/> -->
+  <param name="pcd_folder" type="string" value="/home/dwyane/ANOW/mine/code/loop_closure/map_post_process/src/bag2pcd/trans/pcd"/>
+  <param name="pose_file" type="string" value="/home/dwyane/ANOW/mine/code/loop_closure/map_post_process/src/bag2pcd/trans/pose_out.json"/>
+  <param name="output_ikdtree_file_name" type="string" value="wxx.pcd"/>
+
+  <param name="downsample_leaf_size_for_vis" type="double" value="0.3"/>
+  <param name="downsample_leaf_size_for_kdtree" type="double" value="0.1"/>
+
+  <node pkg="pcd2map" type="pcd2map" name="pcd2map" output="screen" /> 
+
+	<group if="$(arg rviz)">
+	<node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find pcd2map)/launch/pcd2map.rviz" />
+	</group>
+
+</launch>

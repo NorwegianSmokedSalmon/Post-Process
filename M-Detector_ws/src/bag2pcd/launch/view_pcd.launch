@@ -1,0 +1,8 @@
+
+<launch>
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find bag2pcd)/launch/1.rviz" />
+  <param name="trans_name" value="trans"/>
+
+  <node name="view_pcd" pkg="bag2pcd" type="view_pcd" output="screen"/>
+
+</launch>

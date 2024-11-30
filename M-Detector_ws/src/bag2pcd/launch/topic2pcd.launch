@@ -1,0 +1,9 @@
+
+
+<launch>
+    <param name="cloud_name" value="/cloud_registered_body"/>
+    <param name="odom_name" value="/Odometry"/>
+    <param name="trans_name" value="trans1"/>
+
+  <node name="topic2pcd" pkg="bag2pcd" type="topic2pcd" output="screen"/>
+</launch>

@@ -1,0 +1,14 @@
+<launch>
+
+    <param name="trans_name" value="data"/>
+    <!-- <param name="cloud_name" value="/cloud_registered_body"/> -->
+    <param name="cloud_name" value="/m_detector/std_points"/>
+
+    <param name="odom_name" value="/Odometry"/>
+    <param name="bag_file" value="/home/jack/FastLab/Multi-UAV-Map-Post-Process/data/static.bag"/>
+  <node name="bag2pcd" pkg="bag2pcd" type="bag2pcd" output="screen">
+
+  </node>
+
+
+</launch>
